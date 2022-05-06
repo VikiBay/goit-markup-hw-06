@@ -675,7 +675,7 @@ line-height: 1.63;
 
 
 .modal{
-
+padding: 40px 39px 40px 41px;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -683,12 +683,11 @@ transform: translate(-50%, -50%);
 width: 528px;
 min-height: 581px;
 background-color: var(--background-main-color);
-display: flex;
 border-radius: 4px;
 }
 
 .application{
-    padding: 40px 39px 40px 41px;
+    
 }
 
 .application-title{
@@ -702,26 +701,26 @@ margin-bottom: 12px;
 }
 
 .form-field{
-/* outline: 1px solid teal; */
+outline: 1px solid teal;
 }
 
 .form-field:not(:last-child){
     margin-bottom: 10px;
 }
 
-.form-field:nth-child(5) {
+.form-field:nth-chid(4) {
     margin-bottom: 20px;
 }
 
-.form-field:first-child {
+.form-field:last-child {
     color: red;
-    margin-bottom: 300px;
+    margin-bottom: 30px;
 }
 
 .application-comment{
 color: red;
 display: block;    
-width: 448px;
+width: 100%;
 height: 120px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
@@ -740,20 +739,16 @@ color: var(--secondtext-color);
 
 .application-input{
     margin-top: 4px;
-    width: 448px;
+    width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
 
 .application input[type="checkbox"]{
-    width: 16px;
+    width: 16PX;
     height: 15px;
     color: red;
-}
-
-.form-field label{
-    margin-left: 30px;
 }
 
 .backdrop.is-hidden {
