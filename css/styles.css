@@ -460,23 +460,19 @@ fill:currentColor;
 
 .footer .container{
     display: flex;
+    
     }
 .footer{
     background: var(--background-dark-color);
     padding: 60px 215px;
-    
  }
 
 .footer-wrap{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    
+    align-items: baseline;
 }
 
-.footer-social{
-    /* margin-left: 70px; */
-}
 
 .footer-title{
     color: var(--light-text-color);
@@ -484,12 +480,19 @@ fill:currentColor;
     display: block;
 }
 
+.footer-item:nth-child(3){
+margin-bottom: 0;
+}
+
+
 .user-email-inp {
 display: block;
 width: 358px;
 Height: 50px;
-border-radius: 4px;  
-margin-top: 20px;  
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;    
+background-color: transparent;
+padding: 15px;
 }
 
 .footer-socmed-list{
@@ -510,7 +513,7 @@ background-color: var(--accent-color);
 }
 
 .footer-socmed-icon{
-    fill: currentColor;
+ fill: currentColor;
 /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
@@ -555,13 +558,28 @@ color: var(--accent-color);
 
 .subscription-form{
 display: flex;
-/* align-items: flex-start; */
+align-items: baseline;
 }
 
 .subscribe-btn{
     margin-left: 12px;
 }
 
+.sub-svg{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+    
+}
+/* .subscribe-btn::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url("../images/send.svg");
+}
+ */
 .portfolio-list-btn{
     display: flex;
     justify-content: center;
@@ -701,30 +719,33 @@ margin-bottom: 12px;
 }
 
 .form-field{
-outline: 1px solid teal;
+/* outline: 1px solid teal; */
+position: relative;
 }
 
 .form-field:not(:last-child){
     margin-bottom: 10px;
 }
 
-.form-field:nth-chid(4) {
+.form-field:nth-child(4) {
     margin-bottom: 20px;
 }
 
-.form-field:last-child {
-    color: red;
-    margin-bottom: 30px;
+.form-field:nth-child(5){
+margin-bottom: 30px;}
+
+.form-field input[type=checkbox] {
+    
 }
 
 .application-comment{
-color: red;
 display: block;    
 width: 100%;
 height: 120px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 padding: 12px 16px;
+transition: border-color var(--transition-duration) var(--transition-function);
 }
 
 .application-input-title{
@@ -737,18 +758,101 @@ letter-spacing: 0.01em;
 color: var(--secondtext-color);    
 }
 
+
+.application-input-title:hover .app-svg{
+    fill: var(--accent-color);
+}
+
+.application-input-title:hover .application-input{
+    border-color: var(--accent-color);
+}
+
+.form-field:focus-within .app-svg{
+    fill: var(--accent-color);
+}
+
+.form-field:focus-within > .application-input{
+    border-color: var(--accent-color);
+}
+
+.application-input-title:hover .application-comment{
+    border-color: var(--accent-color);
+    
+}
+
 .application-input{
     margin-top: 4px;
     width: 100%;
-    height: 40px;
+    padding: 15px 15px 15px 35px;
+    /* height: 40px; */
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color var(--transition-duration) var(--transition-function);
+    }
+
+    .application label{
+    /* margin-bottom: 4px; */
 }
 
-.application input[type="checkbox"]{
-    width: 16PX;
+.form-field input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+}
+
+.check-label{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--secondtext-color);
+    display: flex;
+    align-items: baseline;
+}
+
+/* .check-label::before{
+    content: '';
+    width: 16px;
     height: 15px;
-    color: red;
+    border: 2px solid var(--maintext-color);
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.input-check:checked +.check-label::before{
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url('../images/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ */
+.app-svg{
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    height: 18px;
+    width: 18px;
+    fill: var(--maintext-color);
+    transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.check-label{
+
+}
+
+.check-svg{
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--maintext-color);
+    border-radius: 2px;
+    margin-right: 5px;
+    fill: transparent;
+}
+
+.input-check:checked +.check-label svg{
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    fill: var(--light-text-color);
 }
 
 .backdrop.is-hidden {
@@ -771,9 +875,18 @@ color: var(--secondtext-color);
 
 }
 
+.policy-link{
+    color: var(--accent-color);
+    text-decoration:underline;
+}
 .modal-close-btn-img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: fill var(--transition-duration) var(--transition-function);
     }
+
+.modal-close-btn-img:hover{
+    fill: var(--accent-color);
+}

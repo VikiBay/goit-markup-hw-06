@@ -333,15 +333,17 @@
                     </ul>    
                 </div>
 
-                
-                <form action="" class="subscription-form">
-                    <label class="footer-title h3">
-                        Подпишитесь на рассылку
-                        <input type="email" name="user-email" placeholder="E-mail" class="user-email-inp" >
-                    </label>
-                    <button type="submit" class="calltoaction-btn subscribe-btn">Подписаться</button>
+                <div class="subscription">
+                <p class="footer-title h3">Подпишитесь на рассылку</p>
+                <form class="subscription-form">
+                    <input type="email" name="user-email" placeholder="E-mail" class="user-email-inp" >
+                    <button type="submit" class="calltoaction-btn subscribe-btn">Подписаться
+                    <svg class="sub-svg"> 
+                        <use href="./images/symbol-defs.svg#icon-send"></use>
+                    </svg>
+                    </button>
                 </form>
-            
+                </div>
             </div>
 
         </footer>
@@ -353,16 +355,25 @@
                     <div class="form-field">
                     <label class="application-input-title">Имя
                     <input type="text" class="application-input">
+                    <svg class="app-svg">
+                        <use href="./images/symbol-defs.svg#icon-person"></use>
+                    </svg>
                     </label>
                     </div>
                         <div class="form-field">
                         <label class="application-input-title" >Телефон
                         <input type="tel" class="application-input">
+                        <svg class="app-svg">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                        </svg>
                         </label>
                         </div>
                     <div class="form-field">
                     <label class="application-input-title">Почта
                     <input type="email" class="application-input">
+                    <svg class="app-svg">
+                        <use href="./images/symbol-defs.svg#icon-email"></use>
+                    </svg>
                     </label>
                     </div>
                             <div class="form-field">
@@ -371,8 +382,15 @@
                             </label>
                             </div>
                             <div class="form-field">    
-                                <input type="checkbox" name="agreement" id="agreement"/>
-                                <label for="agreement">Соглашаюсь с рассылкой и принимаю <a href="/"> условия договора</a></label>
+                                <input type="checkbox" name="policy" id="policy" value="" class="visually-hidden input-check"/>
+                                <label for="policy" class="check-label">
+                                    <svg class="check-svg" width="11" height="8">
+                                        <use href="./images/symbol-defs.svg#icon-check"></use>
+                                    </svg>
+                                    Соглашаюсь с рассылкой и принимаю &ensp; <a href="/" class="policy-link"> Условия договора</a>
+                                </label>
+                                
+                            
                             </div>    
                                 <button type="submit" class="calltoaction-btn appl-btn">Отправить</button>
                 </form>
